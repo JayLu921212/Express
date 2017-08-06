@@ -10,28 +10,12 @@ var events = require("events");
 var emitter = new events.EventEmitter();
 var fs = require("fs");
 var path = require("path");
-var routes = require("./route");
+var routes = require('./src/controller/routes/route.js');
 var ejs = require("ejs");
 var exhdbs = require("express-handlebars");
 
-
-// emitter.on("error", function (err) {
-//     if (err) {
-//         console.log("error:" + err);
-//     }
-// });
-
-
-
-
-app.get('/', function (req, res) {
-    res.render("body", {
-        layout: "layout"
-    });
-});
 app.use('/', routes);
 app.use(express.static("public"));
-
 
 app.set('views', 'src/views');
 app.engine('html', exhdbs({
@@ -41,9 +25,13 @@ app.engine('html', exhdbs({
 }));
 app.set('view engine', 'html');
 
+app.get('/', function (req, res) {
+    res.render("body", {
+        layout: "layout"
+    });
+});
+
+
 
 var server = app.listen(8081, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log("应用实例，访问地址为 http://%s:%s", host, port);
 });
