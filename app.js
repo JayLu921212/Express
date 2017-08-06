@@ -10,11 +10,12 @@ var events = require("events");
 var emitter = new events.EventEmitter();
 var fs = require("fs");
 var path = require("path");
-var routes = require('./src/controller/routes/route.js');
+// var routes = require('/src/controller/routes/route.js');
+var routes = require('./route.js');
 var ejs = require("ejs");
 var exhdbs = require("express-handlebars");
 
-app.use('/', routes);
+app.use(routes);
 app.use(express.static("public"));
 
 app.set('views', 'src/views');
@@ -34,4 +35,6 @@ app.get('/', function (req, res) {
 
 
 var server = app.listen(8081, function () {
+    global.testa = 1;
+    console.log(global.routes);
 });
