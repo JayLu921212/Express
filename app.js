@@ -9,6 +9,10 @@ var http = require("http");
 var events = require("events");
 var emitter = new events.EventEmitter();
 var fs = require("fs");
+var path = require("path");
+var routes = require("./route");
+var ejs = require("ejs");
+var exhdbs = require("express-handlebars");
 
 
 // emitter.on("error", function (err) {
@@ -16,28 +20,30 @@ var fs = require("fs");
 //         console.log("error:" + err);
 //     }
 // });
-//
-//
-// app.get('/', function (req, res) {
-//     res.send('Hello World');
-// });
-//
-// function __readFileTest() {
-//     // var data = fs.readFileSync('input.txt');
-//     // console.log(data.toString());
-//     fs.readFile('input.txt', function (err, data) {
-//         if (err) return console.error(err);
-//         console.log(data.toString());
-//     });
-// }
-//
-// var server = app.listen(8081, function () {
-//     var host = server.address().address
-//     var port = server.address().port
-//     console.log("应用实例，访问地址为 http://%s:%s", host, port)
-//     setInterval(function () {
-//        console.log("node is working");
-//     },2000)
-//     __readFileTest();
-//
-// })
+
+
+
+
+app.get('/', function (req, res) {
+    res.render("body", {
+        layout: "layout"
+    });
+});
+app.use('/', routes);
+app.use(express.static("public"));
+
+
+app.set('views', 'src/views');
+app.engine('html', exhdbs({
+    extname: 'html',
+    layoutsDir: 'src/views',
+    dafaultLayout: 'layout'
+}));
+app.set('view engine', 'html');
+
+
+var server = app.listen(8081, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("应用实例，访问地址为 http://%s:%s", host, port);
+});
