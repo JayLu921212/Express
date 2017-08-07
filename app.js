@@ -2,7 +2,7 @@
  * Created by jlu122 on 2017/7/21.
  */
 //express_demo.js 文件
-
+require('./global');
 var express = require('express');
 var app = express();
 var http = require("http");
@@ -10,12 +10,16 @@ var events = require("events");
 var emitter = new events.EventEmitter();
 var fs = require("fs");
 var path = require("path");
-// var routes = require('/src/controller/routes/route.js');
-var routes = require('./route.js');
-var ejs = require("ejs");
+// var routes = require('./src/controller/routes/route.js');
+var pageRoutes = global.routes.pageroutes;
+// var pageroutes = require('./src/controller/rest/route.js');
+var apiRoutes = global.routes.apiroutes;
+// var routes = require('./route.js');
 var exhdbs = require("express-handlebars");
 
-app.use(routes);
+app.use(pageRoutes);
+app.use(apiRoutes);
+
 app.use(express.static("public"));
 
 app.set('views', 'src/views');
@@ -35,6 +39,5 @@ app.get('/', function (req, res) {
 
 
 var server = app.listen(8081, function () {
-    global.testa = 1;
-    console.log(global.routes);
+
 });
