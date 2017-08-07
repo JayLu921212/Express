@@ -16,11 +16,21 @@ var pageRoutes = global.routes.pageroutes;
 var apiRoutes = global.routes.apiroutes;
 // var routes = require('./route.js');
 var exhdbs = require("express-handlebars");
+// var sassMiddleware = require('node-sass-middleware');
+var compass = require('node-compass');
 
 app.use(pageRoutes);
 app.use(apiRoutes);
 
-app.use(express.static("public"));
+app.use(compass({
+	// project: path.join("./public"),
+	mode: 'expanded',
+	css: 'css',
+	sass: 'scss',
+	cache: false,
+	logging: true
+}));
+app.use(express.static("./public"));
 
 app.set('views', 'src/views');
 app.engine('html', exhdbs({
