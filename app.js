@@ -23,7 +23,7 @@ app.use(pageRoutes);
 app.use(apiRoutes);
 
 app.use(compass({
-	// project: path.join("./public"),
+	project: path.join("./public"),
 	mode: 'expanded',
 	css: 'css',
 	sass: 'scss',

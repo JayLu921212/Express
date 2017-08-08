@@ -1,2 +1,6 @@
 /node_modules
 /example
+/.idea
+/public/css
+/public/.sass-cache
+/public/scss/*.css
