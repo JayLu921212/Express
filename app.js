@@ -35,14 +35,14 @@ app.use(express.static("./public"));
 app.set('views', 'src/views');
 app.engine('html', exhdbs({
     extname: 'html',
-    layoutsDir: 'src/views',
-    dafaultLayout: 'layout'
+    layoutsDir: 'src/views/layout',
+    dafaultLayout: 'index'
 }));
 app.set('view engine', 'html');
 
 app.get('/', function (req, res) {
     res.render("body", {
-        layout: "layout"
+        layout: "index"
     });
 });
 

@@ -8,20 +8,20 @@ var router = express.Router();
 router.get('/home', function(req, res) {
     // res.sendfile( + '/test.html');
     res.render('test',{
-        layout: "layout.html"
+        layout: "index"
     });
 });
 
 router.get('/fake', function(req, res) {
 	// res.sendfile( + '/test.html');
 	res.render('fake',{
-		layout: "layout.html"
+		layout: "index"
 	});
 });
 router.get('/temp', function(req, res) {
 	// res.sendfile( + '/test.html');
 	res.render('temp',{
-		layout: "layout.html"
+		layout: "index"
 	});
 });
 
