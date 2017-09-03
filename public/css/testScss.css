@@ -1,3 +1,14 @@
 body {
   padding: 20px 20px;
 }
+
+.fa {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+.fa .son {
+  width: 150px;
+  height: 150px;
+  background-color: #00B7FF;
+}
