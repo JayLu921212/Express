@@ -18,4 +18,22 @@ router.get("/testapi", function (req, res) {
     handler(res, obj);
 });
 
+router.post("/entranceSearch", function (req, res) {
+    var obj = [{
+        tag: "fake",
+        href: "/fake"
+    },{
+        tag: "temp",
+        href: "/temp"
+    },{
+        tag: "home",
+        href: "/test"
+    }]
+    var handler = function (res, result) {
+        success["data"] = result;
+        res.json(success);
+    }
+    handler(res, obj);
+});
+
 module.exports = router;

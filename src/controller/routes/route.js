@@ -5,7 +5,7 @@ var express = require("express");
 var router = express.Router();
 
 
-router.get('/home', function(req, res) {
+router.get('/test', function(req, res) {
     // res.sendfile( + '/test.html');
     res.render('test',{
         layout: "index"

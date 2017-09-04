@@ -41,7 +41,7 @@ app.engine('html', exhdbs({
 app.set('view engine', 'html');
 
 app.get('/', function (req, res) {
-    res.render("body", {
+    res.render("home", {
         layout: "index"
     });
 });
