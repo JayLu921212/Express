@@ -24,6 +24,12 @@ router.get('/temp', function(req, res) {
 		layout: "index"
 	});
 });
+router.get('/algorithm', function(req, res) {
+	// res.sendfile( + '/test.html');
+	res.render('algorithm',{
+		layout: "index"
+	});
+});
 
 
 module.exports = router;
