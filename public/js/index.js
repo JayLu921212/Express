@@ -15,7 +15,7 @@ function entranceSearch(key) {
         data: {
             key: key
         },
-        async: true,
+        // async: true,
         success: function (data) {
             console.log(data.data);
             showSearchResult(data.data)
@@ -33,7 +33,7 @@ function showSearchResult(dataList) {
         var li =  document.createElement("li");
         var a  =  document.createElement("a");
         a.setAttribute("href", t.href);
-        a.text = t.tag;
+        a.text = t.name;
         li.append(a);
         ul.append(li);
     });

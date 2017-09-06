@@ -6,7 +6,9 @@
   "dependencies": {
     "express": "^4.15.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.17.2"
+  },
   "scripts": {
     "test": "make test"
   },

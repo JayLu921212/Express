@@ -18,6 +18,10 @@ var apiRoutes = global.routes.apiroutes;
 var exhdbs = require("express-handlebars");
 // var sassMiddleware = require('node-sass-middleware');
 var compass = require('node-compass');
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(pageRoutes);
 app.use(apiRoutes);

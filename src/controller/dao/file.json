@@ -1,0 +1,24 @@
+{
+  "pageRoutes": [
+    {
+      "name": "fake",
+      "href": "/fake",
+      "tags": []
+    },
+    {
+      "name": "test",
+      "href": "/test",
+      "tags": []
+    },
+    {
+      "name": "temp",
+      "href": "/temp",
+      "tags": []
+    },
+    {
+      "name": "algorithm",
+      "href": "/algorithm",
+      "tags": []
+    }
+  ]
+}
