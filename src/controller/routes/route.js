@@ -5,41 +5,43 @@ var express = require("express");
 var router = express.Router();
 
 
-router.get('/test', function(req, res) {
-    // res.sendfile( + '/test.html');
-    res.render('test',{
-        layout: "index"
-    });
+router.get('/test', function (req, res) {
+	// res.sendfile( + '/test.html');
+	res.render('test', {
+		layout: "index"
+	});
 });
 
-router.get('/fake', function(req, res) {
+router.get('/fake', function (req, res) {
 	// res.sendfile( + '/test.html');
-	res.render('fake',{
+	res.render('fake', {
 		layout: "index"
 	});
 });
-router.get('/temp', function(req, res) {
+router.get('/temp', function (req, res) {
 	// res.sendfile( + '/test.html');
-	res.render('temp',{
+	res.render('temp', {
 		layout: "index"
 	});
 });
-router.get('/algorithm', function(req, res) {
+router.get('/algorithm', function (req, res) {
 	// res.sendfile( + '/test.html');
-	res.render('algorithm',{
+	res.render('algorithm', {
 		layout: "index"
 	});
 });
-router.get('/dragAndDrop', function(req, res) {
+router.get('/dragAndDrop', function (req, res) {
 	// res.sendfile( + '/test.html');
-	res.render('dragAndDrop',{
+	res.render('dragAndDrop', {
 		layout: "index"
 	});
-router.get('/event', function(req, res) {
-    // res.sendfile( + '/test.html');
-    res.render('event',{
-        layout: "index"
-    });
+});
+
+router.get('/event', function (req, res) {
+	// res.sendfile( + '/test.html');
+	res.render('event', {
+		layout: "index"
+	});
 });
 
 
