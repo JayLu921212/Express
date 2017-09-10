@@ -30,6 +30,12 @@ router.get('/algorithm', function(req, res) {
 		layout: "index"
 	});
 });
+router.get('/event', function(req, res) {
+    // res.sendfile( + '/test.html');
+    res.render('event',{
+        layout: "index"
+    });
+});
 
 
 module.exports = router;
