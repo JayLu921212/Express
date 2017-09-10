@@ -1,0 +1,25 @@
+.createNewTemplate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  .content {
+    display: inline-block;
+    border: 2px #ddd dotted;
+    height: calc(100vh - 40px);
+    flex-basis: 80%;
+  }
+  .tool-bar {
+    display: inline-block;
+    border: none;
+    height: calc(100vh - 40px);
+    width: 15%;
+    background-color: white;
+    .component-tools {
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+      border: 1px #ddd solid;
+    }
+  }
+}

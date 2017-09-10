@@ -30,6 +30,12 @@ router.get('/algorithm', function(req, res) {
 		layout: "index"
 	});
 });
+router.get('/dragAndDrop', function(req, res) {
+	// res.sendfile( + '/test.html');
+	res.render('dragAndDrop',{
+		layout: "index"
+	});
+});
 
 
 module.exports = router;

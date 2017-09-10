@@ -2,6 +2,6 @@
 /example
 /.idea
 /public/css
-/public/.sass-cache
+/public/.sass-cache/*.scss
 /public/scss/*.css
-/public/css/*.cssgit6
+/public/css/*.css
