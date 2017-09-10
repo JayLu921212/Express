@@ -35,6 +35,11 @@ router.get('/dragAndDrop', function(req, res) {
 	res.render('dragAndDrop',{
 		layout: "index"
 	});
+router.get('/event', function(req, res) {
+    // res.sendfile( + '/test.html');
+    res.render('event',{
+        layout: "index"
+    });
 });
 
 
