@@ -4,10 +4,21 @@
   align-items: center;
   padding: 20px 30px;
   .content {
+    background-color: aquamarine;
     display: inline-block;
     border: 2px #ddd dotted;
     height: calc(100vh - 40px);
     flex-basis: 80%;
+    .zxczxc {
+      background-color: white;
+      width: 200px;
+      height: 200px;
+    }
+    .drop-div {
+      background: red;
+      width: 100px;
+      height: 100px;
+    }
   }
   .tool-bar {
     display: inline-block;
